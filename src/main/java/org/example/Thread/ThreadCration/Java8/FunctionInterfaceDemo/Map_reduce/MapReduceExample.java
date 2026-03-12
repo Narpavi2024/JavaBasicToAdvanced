@@ -39,8 +39,10 @@ public class MapReduceExample {
         //getEmployee whose grade A
         //getSalary
 
-        Optional<Double> empsalry = Optional.of(EmployeeDatabase.getEmployees().stream().filter(e -> e.getGrade().equalsIgnoreCase("A"))
-                .map(Employee::getSalary).mapToDouble(i -> i).average().getAsDouble());
+        Optional<Double> empsalry = Optional.of(EmployeeDatabase.getEmployees().
+                stream().filter(e -> e.getGrade().equalsIgnoreCase("A"))
+                .map(Employee::getSalary).
+                mapToDouble(i -> i).average().getAsDouble());
         empsalry.ifPresent(System.out::println);
 
         double sumsalary = EmployeeDatabase.getEmployees().stream().filter(e -> e.getGrade().
