@@ -1,8 +1,6 @@
 package org.example.Thread.ThreadCration.Java8.FunctionInterfaceDemo.CompletableFutureDemo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +16,6 @@ public class Employee {
     private String learningPending;
     private int salary;
     private int rating;
+
+
 }
